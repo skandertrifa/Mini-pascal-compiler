@@ -1,0 +1,98 @@
+/*===========================================================
+  CECI EST UN COMMENTAIRE 
+  @@@@@ ce caractere est correct dans un commentaire, mais pas
+  ailleursd (non decrit dans la bnf de MiniPasc)
+  TP1 - ift2030 - automne 2002
+  ============================================================ */
+
+program tp1Source4;
+
+/* =======================
+  des variables globales
+  ===================== */
+//var y: integer;  
+var x: integer;
+var a: real;
+var tab1: array [1..10] of integer;
+
+
+ 
+procedure encore(t: integer)
+begin 
+  q:=5;
+end 
+
+begin
+  a:=5;
+  write(a);
+	
+  if (a = 3) then
+    a := a + 1
+  else
+    a := a + 20;
+
+  write(a);
+
+  x := 3+2;
+  //write(x);
+  //x := x + tab2[2];
+  
+  //y := tab2[2] + tab2[2];
+  
+  //tab2[0]  := 3;
+  //tab2[1]  := 5;
+  //tab2[11] := 4;
+
+  //tab2[x+y] := 3;
+  /* Bla, Bla
+  Bla Bla
+     Bla
+       Bla
+          Bla96 */
+
+  //maProcedure();
+  //tab();
+
+  //nouvelleProcedure(2,3,tab2);
+  
+  //encore();
+  //encore(2+3);  
+  //encore(2+3,x);        
+
+
+end
+  
+
+  
+/* ====================================================
+  le bloc principal (ne peut acceder qu'aux variables
+  globles (comme en C ou en Java)
+  ==================================================== */
+
+/*begin
+
+  x := 3+2;
+  x := x + tab2[2];
+  y := tab2[2] + tab2[2];
+  
+  tab2[0]  := 3; 
+  tab2[1]  := 5;
+  tab2[11] := 4;
+
+  tab2[x+y] := 3; */
+  /*Bla, Bla
+  Bla Bla
+     Bla
+       Bla
+          Bla*/ 
+       
+  /*maProcedure();
+  tab();
+
+  nouvelleProcedure(2,3,tab2);
+  
+  encore();
+  encore(2+3);  
+  encore(2+3,x);  //ERREUR SEMANTIQUE: la procedure encore n'a pas de parametre
+  
+end */
