@@ -1,4 +1,4 @@
-/*===========================================================
+/* ===========================================================
   CECI EST UN COMMENTAIRE 
   @@@@@ ce caractere est correct dans un commentaire, mais pas
   ailleursd (non decrit dans la bnf de MiniPasc)
@@ -10,55 +10,28 @@ program tp1Source4;
 /* =======================
   des variables globales
   ===================== */
-//var y: integer;  
-var x: integer;
-var a: real;
+  
+var x,y,k,e: integer;
 var tab1: array [1..10] of integer;
 
-
+/* ====================================================
+  une procedure sans parametre, son nom est encore,
+  elle possede une variable locale a
+  ==================================================== */
  
 procedure encore(t: integer)
-begin 
-  q:=5;
-end 
-
+var a,h: integer;
 begin
-  a:=5;
+
   write(a);
+  x := 1 + 20;
 	
-  if (a = 3) then
-    a := a + 1
+  if (a *3) then
+    a := a + 6   
   else
     a := a + 20;
 
   write(a);
-
-  x := 3+2;
-  //write(x);
-  //x := x + tab2[2];
-  
-  //y := tab2[2] + tab2[2];
-  
-  //tab2[0]  := 3;
-  //tab2[1]  := 5;
-  //tab2[11] := 4;
-
-  //tab2[x+y] := 3;
-  /* Bla, Bla
-  Bla Bla
-     Bla
-       Bla
-          Bla96 */
-
-  //maProcedure();
-  //tab();
-
-  //nouvelleProcedure(2,3,tab2);
-  
-  //encore();
-  //encore(2+3);  
-  //encore(2+3,x);        
-
 
 end
   
@@ -69,30 +42,25 @@ end
   globles (comme en C ou en Java)
   ==================================================== */
 
-/*begin
+begin
 
   x := 3+2;
   x := x + tab2[2];
   y := tab2[2] + tab2[2];
   
-  tab2[0]  := 3; 
-  tab2[1]  := 5;
-  tab2[11] := 4;
+  tab1[0]  := 3 ;
+  tab1[1]  := 5;
+  tab1[11] := 4;
 
-  tab2[x+y] := 3; */
-  /*Bla, Bla
+  tab1[x+y] := 3; /*Bla, Bla
   Bla Bla
      Bla
        Bla
           Bla*/ 
        
-  /*maProcedure();
-  tab();
-
-  nouvelleProcedure(2,3,tab2);
   
-  encore();
+  //encore();
   encore(2+3);  
-  encore(2+3,x);  //ERREUR SEMANTIQUE: la procedure encore n'a pas de parametre
+  encore(2+3,x)  /*ERREUR SEMANTIQUE: la procedure encore n'a pas de parametre
   
-end */
+end 

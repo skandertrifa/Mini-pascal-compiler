@@ -65,12 +65,14 @@ programmes:		      PROGRAM_KEYWORD ID SEMICOLON liste_declarations declaration_m
 liste_identificateurs:  ID {
 							checkIdentifier(nom,yylineno);
 						}
-					   |ID VIRGULE liste_identificateurs
+					   |ID {
+							checkIdentifier(nom,yylineno);
+						} VIRGULE liste_identificateurs
 					   |ID {
 							checkIdentifier(nom,yylineno);
 						} error liste_identificateurs{yyerror("une virgule attendue après l'identificateur");YYABORT}
-					   |error VIRGULE liste_identificateurs{yyerror("on ne peut pas commencer par une virgule");YYABORT}
-					   |ID VIRGULE error{yyerror("id attendue après la virgule");YYABORT};
+					   |error VIRGULE liste_identificateurs{yyerror("on ne peut pas commencer par une virgule");YYABORT};
+
 
 standard_type:		    INTEGER { g_type = tInt; }
  				       |REAL { g_type = tFloat; }
@@ -203,7 +205,7 @@ liste_expressions:	 expression
 					 VIRGULE liste_expressions
 					 |expression error liste_expressions{yyerror ("Virgule attendu on line : ");YYABORT };		
 
-expression:	          facteur  
+expression:	         facteur  
 					 |facteur MULOP facteur
 					 |facteur MULOP error{yyerror (" facteur attendu on line : ");YYABORT }
 					 |error MULOP facteur{yyerror (" facteur attendu on line : ");YYABORT }
