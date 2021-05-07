@@ -17,7 +17,6 @@ Or Execute without the interface ( `a.exe < file_source.txt `) .
  
 :fr: Ce Mini-Projet est fait en Mai 2021 dans le cadre d'un Traveaux Pratiques (TP) de la matière: Compilation destiné aux étudiants du 4ème année ingénieur à l'INSAT(Institut National des Sciences Appliquées et Technologiques )
 :us: This Mini-Project is done in May 2021 as part of a Practical Work (TP) of the subject: Compilation intended for students of the 4th year of engineering at INSAT (National Institute of Applied and Technological Sciences)
-&nbsp;
 <img src="https://s3.gifyu.com/images/58lc4g.gif" valign="middle" />
 &nbsp;
 
